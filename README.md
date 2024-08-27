@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/466fb5d2-742b-47b9-8aa7-4e14dab26e3c)# 24k-0004
+24k-0004
 lab task 8
 
 ### Introduction
