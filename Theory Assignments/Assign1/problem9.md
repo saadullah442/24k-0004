@@ -1,13 +1,15 @@
 # Pseudocode
-Declare DOBmonth, Currentmonth As String
+Declare DOBmonth, Currentmonth As Int
 Declare DOBday, Currentday, DOByear, Currentyear As Int
-Input DOByear, Currentyear, DOBday, Currentday, DOBmonth, Currentmonth
+Input DOByear, Currentyear, DOBday, Currentday, DOBmonth, Currentmonth As Int
 Count = 1
 Isoddmonth = False
 Isevenmonth = False
 Ismonthwrong = False
+IsDOBleapyear = False
 While count <= 2 {
   Checkmonth()
+ 
   While Ismonthwrong == True {
     if count == 1 {
       Input Currentmonth
@@ -15,12 +17,72 @@ While count <= 2 {
     Else {
       Input DOBmonth
     }
+    Checkmonth()
   }
+
+  Checkday()
   count = count + 1
 }
 
+While Currentyear < DOByear {
+  Input Currentyear, DOByear
+}
 
-Checkday() {
+If DOByear % 4 == 0 {
+  If DOByear % 400 == 0 {
+    If DOByear % 100 == 0 {
+      IsDOBleapyear = True
+    }
+  } 
+  Else {
+    If DOByear % 100 == 0 {
+      IsDOBleapyear = True
+    } 
+    Else {
+      IsDOBleapyear = False
+    }
+  }
+} 
+Else {
+   IsDOBleapyear = False
+}
+
+
+If Isleapyear == False {
+  If Currentyear - DOByear == 0 {
+    Age = 0
+  }
+  Elseif Currentyear - DOByear > 0 {
+    If Currentmonth - DOBmonth == 0 {
+      If Currentday - DOBday >= 0 {
+        Age = Currentyear - DOByear
+      }
+    }
+    Elseif Currentmonth - DOBmonth > 0 {
+      Age = Currentyear - DOByear
+    }
+    Else {
+      Age = (Currentyear - DOByear) - 1
+    }
+  }
+
+}
+Else {
+  Yeardiff = Currentyear - DOByear
+  If Yeardiff % 4 == 0 {
+  
+  }
+  Elseif Yeardiff % 4 == Yeardiff {
+   Age = 0
+  }
+  Else {
+    divi = Yeardiff / 4
+    Age = 
+  }
+}
+
+
+Function Checkday() {
   If count == 1 {
     day = Currentday
     If isoddmonth == True {
@@ -52,7 +114,7 @@ Checkday() {
 
 
 
-Checkmonth() {
+Function Checkmonth() {
   If count == 1 {
     month = Currentmonth
   }
@@ -60,18 +122,18 @@ Checkmonth() {
     month = DOBmonth
   }
   
-  If month != "January" {
-    If month != "Feburary" {
-      If month != "March" {
-        If month != "April" {
-          If month != "May" {
-            If month != "June" {
-              If month != "July" {
-                If month != "August" {
-                  If month != "September" {
-                    If month != "October" {
-                      If month != "November" {
-                        If month != "December" {
+  If month != 01 {
+    If month != 02 {
+      If month != 03 {
+        If month != 04 {
+          If month != 05 {
+            If month != 06 {
+              If month != 07 {
+                If month != 08 {
+                  If month != 09 {
+                    If month != 10 {
+                      If month != 11 {
+                        If month != 12 {
                           Ismonthwrong = False
                         } 
                         Else {
@@ -125,8 +187,9 @@ Checkmonth() {
       }
     } 
     Else {
+      Checkleapyear()
       Isoddmonth = False
-      Isevenmonth = True
+      Isevenmonth = False
     }
   } 
   Else {
@@ -135,7 +198,7 @@ Checkmonth() {
   }
 }
 
-Checkleapyear() {
+Function Checkleapyear() {
   If count == 1 {
     year = Currentyear
   } 
