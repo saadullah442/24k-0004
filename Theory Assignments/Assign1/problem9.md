@@ -133,5 +133,58 @@ Checkmonth() {
     Isoddmonth = True
     Isevenmonth = False
   }
-
 }
+
+Checkleapyear() {
+  If count == 1 {
+    year = Currentyear
+  } 
+  Else {
+    year = DOByear
+  }
+  
+  If year % 4 == 0 {
+    If year % 400 == 0 {
+      If year % 100 == 0 {
+        If count == 1 {
+          while Currentday > 29 {
+            Input Currentday
+          }
+        }
+        Else {
+          while DOBday > 29 {
+            Input DOBday 
+          }
+        }
+      } 
+      Else {
+      }
+    } 
+    Else {
+      If year % 100 == 0 {
+        If count == 1 {
+          while Currentday > 29 {
+            Input Currentday
+          } 
+        }
+        Else {
+          while Currentday > 28 {
+            Input Currentday
+          }
+        }
+      }
+    }
+  } 
+  Else {
+    If count == 1 {
+      While Currentday > 28 {
+        Input Currentday
+      }
+    }
+    else {
+      while DOBday > 28 {
+        Input DOBday
+      }
+    }
+  }
+} 
