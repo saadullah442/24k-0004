@@ -7,26 +7,7 @@ Isoddmonth = False
 Isevenmonth = False
 Ismonthwrong = False
 IsDOBleapyear = False
-While count <= 2 {
-  Checkmonth()
- 
-  While Ismonthwrong == True {
-    if count == 1 {
-      Input Currentmonth
-    } 
-    Else {
-      Input DOBmonth
-    }
-    Checkmonth()
-  }
 
-  Checkday()
-  count = count + 1
-}
-
-While Currentyear < DOByear {
-  Input Currentyear, DOByear
-}
 
 If DOByear % 4 == 0 {
   If DOByear % 400 == 0 {
@@ -251,3 +232,39 @@ Function Checkleapyear() {
     }
   }
 } 
+
+
+While Currentyear < DOByear {
+  Input Currentyear, DOByear
+}
+
+
+While count <= 2 {
+  Checkmonth()
+ 
+  While Ismonthwrong == True {
+    if count == 1 {
+      Input Currentmonth
+    } 
+    Else {
+      Input DOBmonth
+    }
+    Checkmonth()
+  }
+
+  Checkday()
+  count = count + 1
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
