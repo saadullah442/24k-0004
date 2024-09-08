@@ -43,6 +43,7 @@ While Count != 9 {
     count = count + 1
   }
   If count != 9 { 
+    number = number / 10
     removedNumber = removedNumber + ( count * ( 10 ^ powerCount ) )
     remNumCount = remNumCount + 1
     powerCount = powerCount + 1
@@ -50,13 +51,14 @@ While Count != 9 {
     zeroCount = 0
   }  
   If count == 0 {
+    number = number / 10
     zeroCount = zeroCount + 1
   }
   If count === 9 { 
     number = number + count
     number = (number * (10 ^ remNumCount)) + removedNumber
   }
-  number = number / 10
+  
 }
 Print number
   
