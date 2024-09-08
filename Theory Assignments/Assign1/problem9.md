@@ -77,7 +77,7 @@ Else {
   }
   Else {
     divi = Yeardiff / 4
-    Age = 
+    Age = divi
   }
 }
 
