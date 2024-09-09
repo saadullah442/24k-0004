@@ -43,18 +43,20 @@ While Count != 9 {
     count = count + 1
   }
   If count != 9 { 
+    If count == 0 {
+      zeroCount = zeroCount + 1
+    }
     number = number / 10
     removedNumber = removedNumber + ( count * ( 10 ^ powerCount ) )
     remNumCount = remNumCount + 1
-    powerCount = powerCount + 1
-    powerCount = powerCount + zeroCount
+    powerCount = powerCount + 1 + zeroCount
     zeroCount = 0
   }  
-  If count == 0 {
+  Elseif count == 0 {
     number = number / 10
     zeroCount = zeroCount + 1
   }
-  If count === 9 { 
+  Elseif count == 9 { 
     number = number + count
     number = (number * (10 ^ remNumCount)) + removedNumber
   }
