@@ -46,7 +46,7 @@ If Isleapyear == False {
       Age = (Currentyear - DOByear) - 1
     }
   }
-
+  Print Age
 }
 Else {
   Yeardiff = Currentyear - DOByear
@@ -60,6 +60,7 @@ Else {
     divi = Yeardiff / 4
     Age = divi
   }
+  Print Age
 }
 
 
