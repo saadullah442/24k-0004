@@ -15,15 +15,16 @@ If num1< num2 {
   smallestNum = num1
 }
 Else {
-  largestNum = num2
+  smallestNum = num2
 }
 
-While count <= largestNum {
+While count <= smallestNum {
   If num1 % count == 0 {
     If num2 % count == 0 {
       hcfCount = hcfCount + 1
     }
   }
+  count = count + 1
 }
 
 If hcfCount > 1 {
