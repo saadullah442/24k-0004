@@ -8,7 +8,7 @@ pour 4 litre of water into the jug
 Declare jug1Capacity, jug2Capacity As Int
 Input jug1Capacity, jug2Capacity
 
-If jug1Capacity >=4 
+If jug1Capacity >=4 {
   jug1Capacity = 4
 }
 Else {
