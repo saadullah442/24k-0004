@@ -1,7 +1,7 @@
 # Pseudocode
 Declare DOBmonth, Currentmonth As Int
 Declare DOBday, Currentday, DOByear, Currentyear As Int
-Declare Isleapyear, Isoddmonth, Ismonthworng, Isevenmonth As Boolean
+Declare Isoddmonth, Ismonthworng, Isevenmonth As Boolean
 Input DOByear, Currentyear, DOBday, Currentday, DOBmonth, Currentmonth As Int
 Count = 1
 Isoddmonth = False
@@ -50,7 +50,6 @@ Function Checkleapyear() {
   }
   if ((year % 4 == 0 && year % 400 == 0 && year % 100 != 0) || (year % 4 == 0 && year % 400 != 0 && year % 100 != 0)) 
   {
-    Isleapyear = true;
     printf("Leap year\n");
     if (count == 1) {
       printf("count in 1 in leapyear\n");
@@ -65,7 +64,6 @@ Function Checkleapyear() {
     }
   } 
   else {
-    printf("Not a leap year\n");
     Isleapyear = false;
     if (count == 1) {
       printf("count in 1 in leapyear\n");
