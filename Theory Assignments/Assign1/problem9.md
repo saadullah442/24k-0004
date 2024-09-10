@@ -205,36 +205,24 @@ While count <= 2 {
 
 
 
-If Isleapyear == False {
-  If Currentyear - DOByear == 0 {
-    Age = 0
-  }
-  Elseif Currentyear - DOByear > 0 {
-    If Currentmonth - DOBmonth == 0 {
-      If Currentday - DOBday >= 0 {
-        Age = Currentyear - DOByear
-      }
-    }
-    Elseif Currentmonth - DOBmonth > 0 {
+If Currentyear - DOByear == 0 {
+  Age = 0
+}
+Elseif Currentyear - DOByear > 0 {
+  If Currentmonth - DOBmonth == 0 {
+    If Currentday - DOBday >= 0 {
       Age = Currentyear - DOByear
     }
-    Else {
-      Age = (Currentyear - DOByear) - 1
-    }
   }
-  Print Age
+  Elseif Currentmonth - DOBmonth > 0 {
+    Age = Currentyear - DOByear
+  }
+  Else {
+    Age = (Currentyear - DOByear) - 1
+  }
 }
-Else {
-  Yeardiff = Currentyear - DOByear
-  If Yeardiff % 4 == 0 {
-    divi = yearDiff / 4;
-    Age = divi;
-  }
-  Elseif Yeardiff % 4 == Yeardiff {
-   Age = 0
-  }
-  Print Age
-}
+Print Age
+
 
 
 
