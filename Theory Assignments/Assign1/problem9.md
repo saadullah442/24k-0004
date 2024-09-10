@@ -227,14 +227,11 @@ If Isleapyear == False {
 Else {
   Yeardiff = Currentyear - DOByear
   If Yeardiff % 4 == 0 {
-  
+    divi = yearDiff / 4;
+    Age = divi;
   }
   Elseif Yeardiff % 4 == Yeardiff {
    Age = 0
-  }
-  Else {
-    divi = Yeardiff / 4
-    Age = divi
   }
   Print Age
 }
