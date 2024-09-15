@@ -89,13 +89,13 @@ outside second loop
       }
       else if( count == 9 && numOfNine != 1) {
         number = number/10
-        removedNumber = removedNumber + ( count * ( (int)(pow(10,powerCount) +1e-9) ) )
+        removedNumber = removedNumber + ( count * ( 10 ^ powerCount) ) )
         powerCount = powerCount + 1
         remNumCount = remNumCount + 1    
       }
       else if (count == 9 && numOfNine == 1) { 
         number = number + count
-        number = (number *  (int)(pow(10, remNumCount) +1e-9) ) + removedNumber
+        number = (number *  (10 ^ remNumCount) ) + removedNumber
       }  
     }
     count = 0
