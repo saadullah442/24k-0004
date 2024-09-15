@@ -5,10 +5,10 @@ pour 4 litre of water into the jug
 
 # Pseudocode
 
-Declare jug1Capacity, jug2Capacity As Int
-Input jug1Capacity, jug2Capacity
+Declare jug1Capacity, jug2Capacity, needCapacity As Int
+Input jug1Capacity, jug2Capacity, needCapacity
 
-If jug1Capacity >=4 {
+If jug1Capacity >= needCapacity {
   jug1Capacity = 4
 }
 Else {
