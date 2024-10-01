@@ -1,8 +1,9 @@
 #include <stdio.h>
 int main() {
 
-  int i,num, factors, fibNum;
+  int i, num, factors, fibNum, sum;
   fibNum = 0;
+  int fibArr[2];
   factors = 0;
   do{
     printf("Enter number: ");
@@ -17,10 +18,20 @@ int main() {
   if(factors == 2) {
     for(fibNum=0;fibNum<num;fibNum++){
       if(fibNum == 0) {
-        printf("0");
+        fibArr[0] = 0;
+        fibArr[1] = 0;
+        printf("0\t");
+      }
+      else if(fibNum == 1) {
+        fibArr[0] = 0;
+        fibArr[1] = 1;
+        printf("1\t");
       }
       else {
-        printf("%d", fibNum + (fibNum + 1));
+        sum = fibArr[0] + fibArr[1];
+        fibArr[0] = fibArr[1];
+        fibArr[1] = sum;
+        printf("%d\t", sum);
       }
 
     }
