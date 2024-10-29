@@ -4,7 +4,7 @@
 int binary_to_decimal(int num){
 	int power = 0;	
 	int lastdigit = 0;
-	int denary=0;
+	int denary = 0;
 		
 	while(num != 0){
 		lastdigit = 0;
@@ -26,14 +26,22 @@ int binary_to_decimal(int num){
 }
 
 
-int decimal_to_bianry(int num){
+int decimal_to_binary(int num){
+
 
 	int binary;
+	int power = 0;
+	        
 
+	while(num != 1){
+		printf("10 power; %d\n", (int)pow(10, power));
+		binary += (num % 2) * (int)pow(10, power);
+		num /= 2;	
+		power++;
+	}
+	binary += (num % 2) * (int)pow(10, power);
 	
 	
-
-
 	return binary;
 }
 
@@ -51,9 +59,11 @@ int main(){
 
 	// Converting Decimal To Binary
 	int decimal_num, binary_of_num;
-	printf("Enter any binary number: ");
+	printf("Enter any decimal number: ");
 	scanf("%d", &decimal_num);	
-	
+	binary_of_num = decimal_to_binary(decimal_num);	
+	printf("binary of %d is: %d", decimal_num, binary_of_num);	
+
 
 	return 0;
 }
